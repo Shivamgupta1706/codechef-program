@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int n,i;
+	scanf("%d",&n);
+	int arr[n],count=0,sum=0;
+	for(i=0;i<n;i++)
+	scanf("%d",&arr[i]);
+	for(i=0;i<n;i++)
+	{
+	    if(i%2==0)
+	    {
+	        count=count+arr[i];
+	    }
+	    else
+	    {
+	        count=count-arr[i];
+	    }
+	    if(i%2==0)
+	    sum=sum-arr[i];
+	    else
+	    sum=sum+arr[i];
+	}
+	if(sum>count)
+	{
+	    printf("Miserable Cool");
+	}
+	else if(count>sum)
+	{
+	    printf("Miserable Fool");
+	}
+	else
+	printf("Draw");
+	//printf("%d %d",count,sum);
+	return 0;
+}
